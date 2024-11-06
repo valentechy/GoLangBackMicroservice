@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: microservicio-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: microservicio-backend
+  template:
+    metadata:
+      labels:
+        app: microservicio-backend
+    spec:
+      containers:
+      - name: microservicio-backend
+        image: microservicio-backend:latest
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: microservicio-backend
+spec:
+  selector:
+    app: microservicio-backend
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
