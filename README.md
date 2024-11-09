@@ -12,28 +12,23 @@ Este microservicio expone dos endpoints:
     docker build -t microservicio-backend .
     ```
 
-2. Ejecutar el contenedor localmente (opcional):
-    ```sh
-    docker run -p 8080:8080 microservicio-backend
-    ```
-
-3. Cargar la imagen de Docker en el clúster de kind:
+2. Cargar la imagen de Docker en el clúster de kind:
     ```sh
     kind load docker-image microservicio-backend:latest
     ```
 
-4. Aplicar el archivo de despliegue de Kubernetes:
+3. Aplicar el archivo de despliegue de Kubernetes:
     ```sh
     kubectl apply -f K8s/Deployment.yaml
     ```
 
-5. Verificar que el servicio está corriendo:
+4. Verificar que el servicio está corriendo:
     ```sh
     kubectl get pods
     kubectl get services
     ```
 
-6. Acceder al microservicio:
+5. Acceder al microservicio:
     - Para el endpoint `/primario`: `http://<NodeIP>:<NodePort>/primario`
     - Para el endpoint `/secundario`: `http://<NodeIP>:<NodePort>/secundario`
 
