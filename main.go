@@ -24,5 +24,5 @@ func secundarioHandler(w http.ResponseWriter, r *http.Request) {
 func main() {
 	http.HandleFunc("/primario", primarioHandler)
 	http.HandleFunc("/secundario", secundarioHandler)
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":8081", nil)
 }
