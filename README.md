@@ -1,5 +1,5 @@
 # GoLangBackMicroservice
-Microservicio de prueba utilizado para artículo en [www.valentinpalacios.com](https://valentinpalacios.com/post/plataforma-microservicios-erramientas-cncf-parte1-base/).
+Microservicio de prueba utilizado para artículo en [www.valentinpalacios.com](https://valentinpalacios.com/post/plataforma-microservicios-herramientas-cncf-parte1-base/).
 
 Este microservicio expone dos endpoints:
 - `/primario`: Devuelve un JSON con el color "blue".
